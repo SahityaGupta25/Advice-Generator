@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@500&family=Lato:wght@700&family=Manrope:wght@400;500;800&family=Outfit:wght@400;700&family=Ubuntu:ital@1&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Advice generator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    /* .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); } */
+body{
+  font-family: 'Manrope', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: hsl(218, 23%, 16%);
+}
+    .container{
+      display: flex;
+      flex-direction: column;
+      width: 520px;
+      height: 350px;
+      border-radius: 13px;
+      background-color: hsl(217, 19%, 24%);
+      position: relative;
+      padding: 0 49px;
+      box-sizing: border-box;
+    }
+    .advice-head{
+      margin-top: 50px;
+      text-align: center;
+      color: hsl(150, 100%, 66%);
+      letter-spacing:3px;
+    }
+    .advice{
+      text-align: center;
+      color: hsl(193, 38%, 86%);
+      line-height: 36px;
+      font-size: 1.6rem;
+    }
+    .btn{
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 0;
+      background-color: hsl(150, 100%, 66%);
+      position: absolute;
+      top: 325px;
+    left: 230px;
+    cursor: pointer;
+    
+}
+
+.btn:active{
+  box-shadow: 0px 0px 26px 4px hsl(150, 100%, 66%) ;
+}
+.line{
+  padding: 35px 0px;
+}
+.btn img {
+  width: 20px;
+  text-align: center;
+}
+@media (max-width:500px){
+  .container{
+    width: 420px;
+    height: 293px;
+  }
+  .advice-head{
+      margin-top: 30px;
+    }
+    .advice{
+      line-height: 30px;
+      font-size: 1.2rem;
+    }
+    .btn{
+      width: 60px;
+      height: 60px;
+      top: 259px;
+    left: 179px;
+    }
+    .line{
+  padding: 25px 0px;
+}
+    
+}
+
+@media (max-width:430px){
+  .container{
+    width: 333px;
+    height: 293px;
+    padding: 0 26px;
+  }
+  .advice-head{
+      margin-top: 40px;
+    }
+    .advice{
+      
+      font-size: 1.1rem;
+      line-height: 26px;
+    }
+    .btn{
+      width: 60px;
+      height: 60px;
+      top: 259px;
+    left: 135px;
+  }
+    .line{
+  padding: 30px 0px;
+}
+    
+
+}
+@media (max-width:390px){
+  .container{
+    width: 300px;
+    height: 266px;
+    padding: 0 26px;
+  }
+  .advice-head{
+      margin-top: 40px;
+    }
+    .advice{
+      
+      font-size: 0.9rem;
+      line-height: 26px;
+    }
+    .btn{
+      width: 60px;
+      height: 60px;
+      top: 240px;
+    left: 120px;
+  }
+    .line{
+  padding: 30px 0px;
+}
+    
+
+}
+
+    
+
+  </style>
+</head>
+<body>
+  <div class="container">
+<h5 class="advice-head">ADVICE #<span id="count">1</span></h5>
+<h3 class="advice"><span id="Advice">"It is easy to sit up and take <br>notice, what's difficult is getting <br>up and taking action. "</span> </h3>
+<img class="line" src="./images/pattern-divider-desktop.svg" alt="" srcset="">
+<button class="btn" onclick="fetchRandomAdvice()"><img  src="./images/icon-dice.svg" alt="" srcset=""></button>
+  </div>
+
+<script src="./script.js"></script>
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
